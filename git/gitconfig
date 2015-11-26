@@ -125,3 +125,6 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	email = walter.kleynscheldt@hetzner.co.za
+	name = Walter Kleynscheldt
