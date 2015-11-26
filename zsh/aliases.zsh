@@ -208,3 +208,47 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+## Dir shortcuts
+alias home='cd ~/'
+alias gdir='cd ~/git'
+alias docs='cd ~/Documents'
+alias downloads='cd ~/Downloads'
+alias kernels='cd ~/git/kernels'
+alias music='cd ~/Music'
+alias pictures='cd ~/Pictures'
+alias photos='cd ~/Photos'
+alias puppetgit='cd ~/git/puppet'
+alias scratchpad='cd ~/scratchpad'
+alias scripts='cd ~/scripts'
+alias shelter='cd /media/sf_vagrant/shelter'
+alias videos='cd ~/Videos'
+
+##Quick tools
+alias puppetmasters='cssh `query_nodes puppetmaster`'
+alias mirrors='cssh `query_nodes mirror`'
+alias linsh='sudo mount -t cifs //192.168.0.86/stuff -o username=linsh,password=stompV8 /media/linsh/stuff'
+alias vboxshare='sudo mount -t vboxsf .VirtualBox /media/vbox_share'
+alias w30='s www30.cpt2.host-h.net'
+alias vcs='s vcs.hetzner.co.za'
+alias baculasd='~/scripts/baculasd.sh'
+alias pgu='~/scripts/pgu.sh'
+alias webstore='~/scripts/webstore.sh'
+alias whatkvm="ssh puppetmaster1.cpt2.host-h.net '/usr/local/bin/what_kvm_host.sh $1'"
+alias wherekvm="ssh collectivehub1.jnb2.host-h.net 'where_to_create_new_vm.rb'"
+alias setresolver='~/scripts/setresolver.sh'
+alias pgitup="~/scripts/pgitup.sh $1"
+alias gum="git pull upstream master"
+alias s='/usr/bin/s'
+
+## Sudo fixes
+alias install='sudo aptitude install'
+alias search='sudo aptitude search'
+alias remove='sudo aptitude remove'
+alias update='sudo aptitude update'
+alias upgrade='sudo aptitude update && sudo aptitude upgrade'
+alias dupgrade='sudo aptitude update && sudo aptitude dist-upgrade'
+alias orphand='sudo deborphan | xargs sudo aptitude -y remove --purge'
+alias autoremove='sudo aptitude autoremove'
+alias cleanup='sudo aptitude autoclean &&  sudo aptitude clean && sudo aptitude remove && orphand'
+alias updatedb='sudo updatedb'
