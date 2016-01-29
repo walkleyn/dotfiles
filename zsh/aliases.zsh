@@ -78,6 +78,7 @@ alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
+alias gca='git ca'
 alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -105,7 +106,7 @@ alias gf='git fetch'
 alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
-alias gbd='git b -D -w'
+alias gbd='git b -D'
 # Staged and cached are the same thing
 alias gdc='git diff --cached -w'
 alias gds='git diff --staged -w'
@@ -240,6 +241,10 @@ alias setresolver='~/scripts/setresolver.sh'
 alias pgitup="~/scripts/pgitup.sh $1"
 alias gum="git pull upstream master"
 alias s='/usr/bin/s'
+alias kc='konsoleprofile colors=Solarized'
+alias ghe='ssh -p 122 admin@github.hetzner.co.za'
+alias ghe_cpt='ssh -p 122 admin@github1.cpt3.host-h.net'
+alias ghe_jnb='ssh -p 122 admin@github1.jnb2.host-h.net'
 
 ## Sudo fixes
 alias install='sudo aptitude install'
