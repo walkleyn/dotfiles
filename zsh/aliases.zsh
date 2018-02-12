@@ -150,6 +150,7 @@ alias gz='tar -zcvf'
 alias c='rails c' # Rails 3
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
+alias rvs='rvm use system'
 
 #If you want your thin to listen on a port for local VM development
 #export VM_IP=10.0.0.1 <-- your vm ip
@@ -235,7 +236,7 @@ alias videos='cd ~/Videos'
 
 ##Quick tools
 alias canaries='grep -rl canary /home/walterk/git/puppet_work/hieradata/fqdn/* | rev | cut -d/ -f1 | rev | cut -d. -f1-4'
-alias puppetmasters='cssh `query_nodes puppetmaster`'
+alias puppetmasters='cssh `query_nodes puppetserver`'
 alias mirrors='cssh `query_nodes mirror`'
 alias linsh='sudo mount -t cifs //192.168.0.86/stuff -o username=linsh,password=stompV8 /media/linsh/stuff'
 alias vboxshare='sudo mount -t vboxsf .VirtualBox /media/vbox_share'
@@ -249,11 +250,12 @@ alias wherekvm="ssh collectivehub1.jnb2.host-h.net 'where_to_create_new_vm.rb'"
 alias setresolver='~/scripts/setresolver.sh'
 alias pgitup="~/scripts/pgitup.sh $1"
 alias gum="git pull upstream master"
-alias s='/usr/local/bin/s'
+alias s='/usr/bin/s'
 alias kc='konsoleprofile colors=Solarized'
 alias ghe='ssh -p 122 admin@github.hetzner.co.za'
 alias ghe_cpt='ssh -p 122 admin@github1.cpt3.host-h.net'
 alias ghe_jnb='ssh -p 122 admin@github1.jnb2.host-h.net'
+alias getmanaged='mco find -I /\^www\\d+\|\^dedi\\d+/'
 
 ## Sudo fixes
 alias install='sudo aptitude install'
