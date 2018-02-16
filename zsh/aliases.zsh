@@ -104,6 +104,9 @@ alias glog='git l'
 alias co='git co'
 alias gf='git fetch'
 alias gfch='git fetch'
+alias gfp='git fetch --prune'
+alias gfa='git fetch --all'
+alias gfap='git fetch --all --prune'
 alias gd='git diff'
 alias gb='git b'
 alias gbd='git b -D'
@@ -114,6 +117,8 @@ alias gpub='grb publish'
 alias gtr='grb track'
 alias gpl='git pull'
 alias gplr='git pull --rebase'
+alias gpp='git pull origin production'
+alias gdp='git diff origin/production'
 alias gps='git push'
 alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias gnb='git nb' # new branch aka checkout -b
@@ -145,6 +150,7 @@ alias gz='tar -zcvf'
 alias c='rails c' # Rails 3
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
+alias rvs='rvm use system'
 
 #If you want your thin to listen on a port for local VM development
 #export VM_IP=10.0.0.1 <-- your vm ip
@@ -220,13 +226,17 @@ alias music='cd ~/Music'
 alias pictures='cd ~/Pictures'
 alias photos='cd ~/Photos'
 alias puppetgit='cd ~/git/puppet_work'
+alias control='cd ~/git/puppet_work/control'
+alias hieradata='cd ~/git/puppet_work/hieradata'
+alias monolith='cd ~/git/puppet_work/monolith'
 alias scratchpad='cd ~/scratchpad'
 alias scripts='cd ~/scripts'
 alias shelter='cd /media/sf_vagrant/shelter'
 alias videos='cd ~/Videos'
 
 ##Quick tools
-alias puppetmasters='cssh `query_nodes puppetmaster`'
+alias canaries='grep -rl canary /home/walterk/git/puppet_work/hieradata/fqdn/* | rev | cut -d/ -f1 | rev | cut -d. -f1-4'
+alias puppetmasters='cssh `query_nodes puppetserver`'
 alias mirrors='cssh `query_nodes mirror`'
 alias linsh='sudo mount -t cifs //192.168.0.86/stuff -o username=linsh,password=stompV8 /media/linsh/stuff'
 alias vboxshare='sudo mount -t vboxsf .VirtualBox /media/vbox_share'
@@ -245,6 +255,7 @@ alias kc='konsoleprofile colors=Solarized'
 alias ghe='ssh -p 122 admin@github.hetzner.co.za'
 alias ghe_cpt='ssh -p 122 admin@github1.cpt3.host-h.net'
 alias ghe_jnb='ssh -p 122 admin@github1.jnb2.host-h.net'
+alias getmanaged='mco find -I /\^www\\d+\|\^dedi\\d+/'
 
 ## Sudo fixes
 alias install='sudo aptitude install'
