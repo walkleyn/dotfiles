@@ -255,7 +255,7 @@ alias kc='konsoleprofile colors=Solarized'
 alias ghe='ssh -p 122 admin@github.hetzner.co.za'
 alias ghe_cpt='ssh -p 122 admin@github1.cpt3.host-h.net'
 alias ghe_jnb='ssh -p 122 admin@github1.jnb2.host-h.net'
-alias getmanaged='mco find -I /\^www\\d+\|\^dedi\\d+/'
+alias getmanaged='mco find -I /\^www\\d+\|\^dedi\\d+/ --dt=5'
 
 ## Sudo fixes
 alias install='sudo aptitude install'
