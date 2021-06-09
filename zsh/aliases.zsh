@@ -103,10 +103,10 @@ alias glg='git l'
 alias glog='git l'
 alias co='git co'
 alias gf='git fetch'
-alias gfch='git fetch'
 alias gfp='git fetch --prune'
 alias gfa='git fetch --all'
 alias gfap='git fetch --all --prune'
+alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
 alias gbd='git b -D'
@@ -184,6 +184,7 @@ alias zrc='zeus rails c'
 alias zrs='zeus rails s'
 alias zrdbm='zeus rake db:migrate'
 alias zrdbtp='zeus rake db:test:prepare'
+alias zzz='rm .zeus.sock; pkill zeus; zeus start'
 
 # Rspec
 alias rs='rspec spec'
@@ -213,6 +214,8 @@ alias dbmr='spring rake db:migrate:redo'
 alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
 
+# Homebrew
+alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 ## Dir shortcuts
 alias home='cd ~/'
 alias gdir='cd ~/git'
@@ -250,7 +253,7 @@ alias wherekvm="ssh collectivehub1.jnb2.host-h.net 'where_to_create_new_vm.rb'"
 alias setresolver='~/scripts/setresolver.sh'
 alias pgitup="~/scripts/pgitup.sh $1"
 alias gum="git pull upstream master"
-alias s='/usr/bin/s'
+alias s='/usr/local/bin/s'
 alias kc='konsoleprofile colors=Solarized'
 alias ghe='ssh -p 122 admin@github.hetzner.co.za'
 alias ghe_cpt='ssh -p 122 admin@github1.cpt3.host-h.net'
